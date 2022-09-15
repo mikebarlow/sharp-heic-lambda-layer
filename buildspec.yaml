@@ -23,7 +23,6 @@ phases:
   post_build:
     commands:
       - bash -c "if [ /"$CODEBUILD_BUILD_SUCCEEDING/" == /"0/" ]; then exit 1; fi" # check if build was successful. exit otherwise.
-      - npm run deploy
 artifacts:
   files:
     - .aws-sam/**/*
